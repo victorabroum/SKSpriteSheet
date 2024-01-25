@@ -30,7 +30,7 @@ public class SKCropper {
                     if let croppedImage = cgImage.cropping(to: rect) {
                         let sprite = NSImage(cgImage: croppedImage, size: NSSize(width: spriteWidth, height: spriteHeight))
                         let texture = SKTexture(image: sprite)
-                        texture.filteringMode = .nearest
+                        texture.filteringMode = filteringMode
                         sprites.append(texture)
                     }
                 }
